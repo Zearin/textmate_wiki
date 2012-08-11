@@ -6,6 +6,8 @@ Apple clang version 4.0 (tags/Apple/clang-421.0.57) (based on LLVM 3.1svn) Targe
 
 Here are particaly changed instructions for installing it with homebrew:
 
+* ```curl -LsSf http://github.com/mxcl/homebrew/tarball/master | sudo tar xvz -C/usr/local –strip 1```
+
 * ```brew install ragel boost pgrep multimarkdown hg```
 
 * ```brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/head-only/ninja.rb```
