@@ -6,7 +6,9 @@ Apple clang version 4.0 (tags/Apple/clang-421.0.57) (based on LLVM 3.1svn) Targe
 
 Here are particaly changed instructions for installing it with homebrew:
 
-* ```brew install ragel boost pgrep multimarkdown hg brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/head-only/ninja.rb```
+* ```brew install ragel boost pgrep multimarkdown hg 
+
+* ```brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/head-only/ninja.rb```
 
 * ```git clone https://github.com/textmate/textmate.git```
 
