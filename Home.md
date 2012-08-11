@@ -12,7 +12,7 @@ Here are particaly changed instructions for installing it with homebrew:
 
 * ```brew install --HEAD https://raw.github.com/adamv/homebrew-alt/master/head-only/ninja.rb```
 
-* ```git clone https://github.com/textmate/textmate.git```
+* ```git clone --recursive https://github.com/textmate/textmate.git textmate```
 
 * ```cd textmate```
 
