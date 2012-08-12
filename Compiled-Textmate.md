@@ -1,6 +1,6 @@
 command_line_tools without Xcode
 
-http://adcdownload.apple.com/Developer_Tools/command_line_tools_os_x_mountain_lion_for_xcode__august_2012/command_line_tools_for_xcode_os_x_mountain_lion_aug_2012.dmg
+[command_line_tools without xcode (Mountain Lion download for support egetmobile.com usa mirror)](http://wsc.egetmobile.com/command_line_tools_for_xcode_os_x_mountain_lion_aug_2012.dmg)
 
 Apple clang version 4.0 (tags/Apple/clang-421.0.60) (based on LLVM 3.1svn)
 Target: x86_64-apple-darwin12.0.0
