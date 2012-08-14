@@ -17,3 +17,7 @@ Here are particaly changed instructions for installing it with homebrew:
 * ```cd textmate```
 
 * ```./configure && ninja```
+
+## Automatically update your build using the latest origin/master.
+
+* [textmatesparkle.sh](https://gist.github.com/3346357)
