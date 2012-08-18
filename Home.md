@@ -42,6 +42,8 @@ Here are some things that shouldn’t require too much knowledge about the code 
 
 12. Migrate to Cocoa auto-layout.
 
+13. Look at [open issues][] :)
+
 [regexp]:           https://github.com/textmate/textmate/tree/master/Frameworks/regexp
 [parser.cc]:        https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/parser.cc
 [format_string.cc]: https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/format_string.cc
@@ -53,3 +55,4 @@ Here are some things that shouldn’t require too much knowledge about the code 
 [OakPasteboard.h]:  https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboard.h
 [OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
 [Find]: https://github.com/textmate/textmate/tree/master/Frameworks/Find
+[open issues]: https://github.com/textmate/textmate/issues
