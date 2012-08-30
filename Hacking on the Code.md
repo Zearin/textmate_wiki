@@ -24,8 +24,6 @@ Here are some things that shouldn’t require too much knowledge about the code 
 
 	This is the [OakFilterList][] framework.
 
-5.	Subversion SCM driver, see [api.h][] in the [scm][] framework. The [hg.cc][] driver might be a good starting point (as it’s simple).
-
 6.	Custom data sources for file browser, e.g. Simplenote support or sftp, see [FSDataSource.h][].
 
 7.  There is a pasteboard subclass which maintains a history ([OakPasteboard.h][]). This is used both for find and copy clipboards. This history is presently stored in user defaults which is bad (can grow big and affect performance). Instead it might be useful to use CoreData (if we were in the App Store then we could even offer users to sync clipboard history).
@@ -40,6 +38,8 @@ Here are some things that shouldn’t require too much knowledge about the code 
 
 12. Migrate to Cocoa auto-layout.
 
+12. Implement `OakTabTriggerImage`. This should be an `NSImage` subclass that simply renders a tab trigger. This would be used in the menus and bundle item selector, probably also bundle editor. Making it an `NSImage` subclass should allow embedding it in attributed strings (which is what we use for the menu items as augmenting menu rendering is not really possible with Cocoa, only to replace the full item with a custom view). For how to go about this look e.g. at the implementation of [OakFileIconImage][].
+
 13. Look at [open issues][] :)
 
 [regexp]:           https://github.com/textmate/textmate/tree/master/Frameworks/regexp
@@ -52,5 +52,6 @@ Here are some things that shouldn’t require too much knowledge about the code 
 [FSDataSource.h]:   https://github.com/textmate/textmate/blob/master/Frameworks/OakFileBrowser/src/io/FSDataSource.h
 [OakPasteboard.h]:  https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboard.h
 [OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
-[Find]: https://github.com/textmate/textmate/tree/master/Frameworks/Find
-[open issues]: https://github.com/textmate/textmate/issues
+[Find]:             https://github.com/textmate/textmate/tree/master/Frameworks/Find
+[open issues]:      https://github.com/textmate/textmate/issues
+[OakFileIconImage]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakFileIconImage.mm
