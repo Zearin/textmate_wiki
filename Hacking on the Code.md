@@ -36,7 +36,7 @@ Here are some things that shouldn’t require too much knowledge about the code 
 
 11. Switch codebase to use ARC.
 
-12. Migrate to Cocoa auto-layout.
+12. Migrate to Cocoa auto-layout (and provide a ‘base’ for localization).
 
 12. Implement `OakTabTriggerImage`. This should be an `NSImage` subclass that simply renders a tab trigger. This would be used in the menus and bundle item selector, probably also bundle editor. Making it an `NSImage` subclass should allow embedding it in attributed strings (which is what we use for the menu items as augmenting menu rendering is not really possible with Cocoa, only to replace the full item with a custom view). For how to go about this look e.g. at the implementation of [OakFileIconImage][].
 
