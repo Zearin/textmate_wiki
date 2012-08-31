@@ -1,10 +1,11 @@
-Here are some things that shouldn’t require too much knowledge about the code base, as they are fairly isolated:
+Here are some self-contained projects that shouldn’t require too much knowledge about the code base, as they are fairly isolated:
 
-1.	The syntax for format strings include replacements for variables like this:
+1.	Enhancing the syntax for format strings 
+	The format string syntax allows replacements for variables as follows:
 
 		${«variable»/«regexp»/«replacement»/«flags»}
 
-	For example to replace spaces with dashes in the `$TM_FULLNAME` variable we might do:
+	For example, to replace spaces with dashes in the `$TM_FULLNAME` variable we might do:
 
 		${TM_FULLNAME/ /-/g}
 
@@ -26,7 +27,7 @@ Here are some things that shouldn’t require too much knowledge about the code 
 
 6.	Custom data sources for file browser, e.g. Simplenote support or sftp, see [FSDataSource.h][].
 
-7.  There is a pasteboard subclass which maintains a history ([OakPasteboard.h][]). This is used both for find and copy clipboards. This history is presently stored in user defaults which is bad (can grow big and affect performance). Instead it might be useful to use CoreData (if we were in the App Store then we could even offer users to sync clipboard history).
+7.  There is a pasteboard subclass which maintains a history ([OakPasteboard.h][]). This is used both for find and copy clipboards. This history is presently stored in user defaults which is bad (can grow big and affect performance). Instead it might be useful to use CoreData (if we were in the App Store then we could even offer users the facility to sync their clipboard history).
 
 8.  The clipboard history pop-ups (⌃⌥⌘V and ⌃⌥⌘F) are very crude ([OakPasteboardSelector.mm][]). It would be nice if one could “type to search”. Perhaps similar to Adium, where if you type a letter (with focus in the contact list) a search field appears above the list, which is what then filters the list.
 
