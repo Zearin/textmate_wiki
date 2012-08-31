@@ -2,7 +2,7 @@
 
 *   [[Hacking on the Code]]
 	
-	Starting points to start contributing, these are self-contained to be approachable without knowing the full codebase.
+	Starting points to start contributing, these are self-contained and therefore are approachable without knowledge of the full codebase.
 
 ## UI Concepts
 
