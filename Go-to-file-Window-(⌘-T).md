@@ -2,7 +2,7 @@
 1. Tabs
 	1. Choose folder target:
 		* Allow user to drop a folder on the left-tab or file list to set the root folder
-		* Click tab to open a choose-Folder dialog
+		* Double-click tab to open a choose-Folder dialog
 		* ⌘-click Titlebar to navigate Finder hierarchy
 	2. Draw tabs as in the main UI
 	3. Have a distinct target for each tab?
