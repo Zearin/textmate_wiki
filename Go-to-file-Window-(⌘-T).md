@@ -11,8 +11,7 @@
 	2. Merge glob filter into selection string? `+.md` = only return files containing .md
 3. General
 	1. Make this a proper window, able to be left open, and updating live
-	2. Settings (location, filer) hold across openings
-	5. All lists need filters: Add to the main project view?
+	2. Settings (location, filter combo) hold across openings
 
 ### Existing Window
 ![Image Alt](https://github.com/tbates/wiki/raw/master/images/old_cmdT.png)
