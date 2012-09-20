@@ -7,3 +7,6 @@
 ## UI Concepts
 
 * [[Main Window]]
+
+* Other UI thoughts (user sourced)
+ * [[Go-to-file-Window-(⌘-T)]]
