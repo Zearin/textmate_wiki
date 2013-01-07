@@ -7,6 +7,7 @@
 * Other UI thoughts (user sourced)
  * [[Go-to-file-Window-(⌘-T)]]
  * [[Bundle-Editor]]
+ * [[Minor-improvements]]
 
 ## Snippet and command concepts
 * [[Snippets-and-Commands]]
