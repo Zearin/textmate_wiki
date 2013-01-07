@@ -12,3 +12,6 @@
  * [[Go-to-file-Window-(⌘-T)]]
 
 * [[Bundle-Editor]]
+
+## Snippet and command concepts
+* [[Snippets-and-Commands]]
