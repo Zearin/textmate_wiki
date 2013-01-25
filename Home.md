@@ -13,4 +13,4 @@
 * [[Snippets-and-Commands]]
 
 ## Help files and other lists
-* [[.tmProperties]]
+* [[.tm_properties]]
