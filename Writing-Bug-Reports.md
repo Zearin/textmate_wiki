@@ -9,3 +9,5 @@ A bug report should contain these 4 things:
 4. **Environment**: This would be OS version, version of TextMate, and other possibly relevant information, for example if you are seeing graphics artifacts and you are on a retina Macbook Pro, then you should include that.
 
 If you include pictures or movies then be sure that the bug report is still useful even if that information was not included. For example opening an issue stating that “syntax highlight is incorrect” and only including an image is not useful.
+
+Even if the bug affects your productivity negatively, refrain from telling us that you are annoyed, that it is frustrating, or similar. This just sends an unnecessary negative vibe.
