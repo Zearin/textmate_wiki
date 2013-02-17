@@ -1,14 +1,18 @@
-A few settings are not exposed in the interface, you can change these with the `defaults` command in a terminal.
+TextMate has a few settings which are not exposed in the GUI.
 
-To read the current value of a setting you run:
+You can change these with the [`defaults`](http://developer.apple.com/documentation/Darwin/Reference/ManPages/man1/defaults.1.html) shell command but you need to do this while TextMate is not running.
 
-	defaults read com.macromates.TextMate.preview «key»
+You set a key to a given value with the following syntax:
 
-To delete any custom value you may have set, you run:
+	defaults write com.macromates.TextMate.preview «key» «value»
+
+You can always reset a key to its default value using:
 
 	defaults delete com.macromates.TextMate.preview «key»
 
-You should generally quit TextMate before making changes to its settings via the `defaults` command.
+Or you can read the value of a key using:
+
+	defaults read com.macromates.TextMate.preview «key»
 
 ## Disabling Extended Attributes
 
