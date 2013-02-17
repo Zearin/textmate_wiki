@@ -31,7 +31,7 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 
 12. Implement `OakTabTriggerImage`. This should be an `NSImage` subclass that simply renders a tab trigger. This would be used in the menus and bundle item selector, probably also bundle editor. Making it an `NSImage` subclass should allow embedding it in attributed strings (which is what we use for the menu items as augmenting menu rendering is not really possible with Cocoa, only to replace the full item with a custom view). For how to go about this look e.g. at the implementation of [OakFileIconImage][].
 
-13. Look at [open issues][] :)
+13. Look at [open issues][] — also look at [bundle issues][].
 
 [regexp]:           https://github.com/textmate/textmate/tree/master/Frameworks/regexp
 [parser.cc]:        https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/parser.cc
@@ -40,4 +40,5 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 [OakPasteboard.h]:  https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboard.h
 [OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
 [open issues]:      https://github.com/textmate/textmate/issues
+[bundle issues]:    https://github.com/organizations/textmate/dashboard/issues
 [OakFileIconImage]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakFileIconImage.mm
