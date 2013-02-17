@@ -1,6 +1,7 @@
 ## Documentation
 *   [[Hidden Settings]]
 	Things you can only set via the `defaults` command.
+*   [[FAQ]]
 
 ## Contributing
 *   [[Hacking on the Code]]
