@@ -1,0 +1,59 @@
+A few settings are not exposed in the interface, you can change these with the `defaults` command in a terminal.
+
+To read the current value of a setting you run:
+
+	defaults read com.macromates.TextMate.preview «key»
+
+To delete any custom value you may have set, you run:
+
+	defaults delete com.macromates.TextMate.preview «key»
+
+You should generally quit TextMate before making changes to its settings via the `defaults` command.
+
+## Disabling Extended Attributes
+
+TextMate use extended attributes to store caret position and similar.
+
+On file systems which don’t support extended attributes (most network file systems) OS X will create an auxiliary file with a dot-underscore prefix, e.g. `._filename`.
+
+If you don’t want these files, you can disable the use of extended attributes, this is presently controlled with the `volumeSettings` defaults key which value is an associative array with path prefix and another associative array with settings for that path (presently only `extendedAttributes` is supported).
+
+So if for example we wish to disable extended attributes for files under `/net/` we can do:
+
+	defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
+
+## Changing Line Height
+
+You can adjust line height by changing the `fontLeadingDelta` and `fontAscentDelta` defaults keys.
+
+These must be set as floats or integers (not strings), e.g.:
+
+    defaults write com.macromates.TextMate.preview fontLeadingDelta -float 0
+
+The default value for both keys is `1`.
+
+## Disabling Anti Alias
+
+Anti-alias can be disabled using the following:
+
+	defaults write com.macromates.TextMate.preview disableAntiAlias -bool YES
+
+## Disabling Clipboard History
+
+If you relaunch TextMate it will remember the clipboard history from last session. This is stored in its user defaults.
+
+If you dislike this, e.g. if you copy/paste a lot of passwords, then you can disable the feature like this:
+
+	defaults write com.macromates.TextMate.preview disablePersistentClipboardHistory -bool YES
+
+## Inheriting Environment Variables
+
+When TextMate run commands it creates a “clean” environment, only inheriting a select few variables from its parent process. You can alter the whitelist via the `environmentWhitelist` defaults key. This is a colon-separated list of variables to inherit. If an item in the list contains an asterisk, then it is treated as a glob.
+
+Example:
+
+	defaults write com.macromates.TextMate.preview environmentWhitelist '$default:MANPATH:*EDITOR'
+
+Here `$default` will expand to TextMate’s default whitelist.
+
+Normally TextMate will setup `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If you whitelist any of these, then the variable (if set) will instead be inherited from the parent process.
