@@ -39,7 +39,7 @@ If you'd rather disable the indentations entirely you can do the same and just n
 
 Explicit project files are currently not supported. When you open a folder then that folder is treated as a project, i.e. the file chooser (⌘T) and folder search (⇧⌘F) will default to this folder.
 
-You can custmize settings for a folder with a [.tm_properties file](http://blog.macromates.com/2011/git-style-configuration/ "TextMate Blog &raquo; Git Style Configuration").
+You can customize settings for a folder with a [.tm_properties file](http://blog.macromates.com/2011/git-style-configuration/ "TextMate Blog &raquo; Git Style Configuration").
 
 Allan has made a couple posts in a longer thread about this topic:
 
