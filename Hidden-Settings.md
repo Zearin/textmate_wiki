@@ -61,3 +61,9 @@ Example:
 Here `$default` will expand to TextMate’s default whitelist.
 
 Normally TextMate will setup `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If you whitelist any of these, then the variable (if set) will instead be inherited from the parent process.
+
+## Disabling File Browser Auto-resize
+
+When you show/hide the file browser, the window will adjust its width accordingly. This can be disabled using:
+
+	defaults write com.macromates.TextMate.preview disableFileBrowserWindowResize -bool YES
