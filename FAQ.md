@@ -12,11 +12,27 @@ There are currently two possible ways to do this both using the semantic class s
 
 You can use `callback.document.export` which will filter the document that is saved to disk, but not update the copy inside TextMate. The inverse is also possible with `callback.document.will-save` where the copy inside TextMate will be updated before saving.
 
-### Is is possible to disable soft wrap?
+### Is it possible to disable soft wrap?
 
 There is a toggle in the View menu to turn on/off soft wrap. This stores the setting “for the current file type”.
 
 Even with soft wrap disabled there are setting items in the Source bundle to enable indented soft wrap for comments in source files. These can be disabled by unchecking the "Enable this item" checkbox in the bundle editor.
+
+### Is it possible to disable auto-paired characters?
+
+There is presently no global setting for disabling this, but you can create a new settings item that disables them.
+
+ 1. Open Bundle Editor: _Bundles → Edit Bundles…_ (<kbd>⌃⌥⌘B</kbd>).
+ 2. Create a new bundle: File → New (<kbd>⌘N</kbd>) and select _Bundle_.
+ 3. Create a new setting in that bundle: File → New (<kbd>⌘N</kbd>) and select _Setting_.
+ 4. Set _Scope Selector_ to `*` (matches everywhere).
+ 5. Set the content to the following property list:
+
+		{   
+			smartTypingPairs = ( );
+		}
+
+ 6. Save the new item: _File → Save_ (<kbd>⌘S</kbd>).
 
 ### In 1.x a return between `{}` was treated specially giving you an indented caret on a blank line, this no longer works in the alpha.
 
