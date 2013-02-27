@@ -11,6 +11,24 @@ A bug report should contain these 4 things:
 
 4. **Environment**: This would be OS version, version of TextMate, the language you are working in, and other possibly relevant information, for example if you are seeing graphics artifacts and you are on a retina Macbook Pro, then you should include that.
 
-If you include pictures or movies then be sure that the bug report can stand on its own even without these. For example opening an issue stating that “syntax highlight is incorrect” and only including an image is not useful.
+## Writing the Title
 
-If the bug affects your productivity negatively, it’s appreciated if you refrain from telling us how annoyed you are.
+See [this great article by Jakob Nielsen on writing headlines, page titles, and subject lines](http://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/).
+
+## Crashes or Hangs
+
+Unless you have steps to reproduce, there is generally no need to report a crash, as we already get crash reports from users who haven’t opted out. You can change this in Preferences → Software Update.
+
+If you are opening an issue about TextMate crashing then you should include the corresponding crash report. You can find a list of submitted reports in notification center. Click an entry to see the online version, which gives you a link that can be included in the issue. You should also be able to find crash reports for your system online under [my crashes](https://api.textmate.org/crashes/myip).
+
+If the program locks up, that is different from a crash and you should find or create a “spin report”. These can normally be found as:
+
+    /Library/Logs/DiagnosticReports/TextMate_«time»_«host».hang
+
+You can generate one while the program is locked up by launching Activity Monitor, selecting TextMate, and then _Sample Process_ (<kbd>⌥⌘S</kbd>).
+
+Since GitHub’s issue tracker does not allow attaching files, you should paste the spin report online via https://gist.github.com/
+
+## Adding Pictures
+
+If you include pictures or movies then be sure that the bug report can stand on its own even without these. For example opening an issue stating that “syntax highlight is incorrect” and only including an image is not useful.
