@@ -11,6 +11,7 @@
 
 ## UI Concepts
 * [[Main Window]]
+* [[aPreferences]]
 
 ## Help files and other lists
 * [[.tm_properties]]
