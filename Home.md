@@ -13,5 +13,8 @@
 * [[Main Window]]
 * [[Preferences]]
 
+## Other concepts
+* [[Command Snippet and Macro Concepts]]
+
 ## Help files and other lists
 * [[.tm_properties]]
