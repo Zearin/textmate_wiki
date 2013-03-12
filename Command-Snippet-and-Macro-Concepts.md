@@ -20,3 +20,5 @@
     setReplacePboard:=' = '
     ReplaceAllInSelection:
 </pre>
+
+Probably not needed given the ability to do [this](http://pastie.org/private/jhzsmadg4m3rjns6bsfg)
