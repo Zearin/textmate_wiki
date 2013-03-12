@@ -67,3 +67,37 @@ Normally TextMate will setup `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If
 When you show/hide the file browser, the window will adjust its width accordingly. This can be disabled using:
 
 	defaults write com.macromates.TextMate.preview disableFileBrowserWindowResize -bool YES
+
+# Keybindings
+
+Key bindings are consulted in the following order (first file with a binding wins):
+
+	~/Library/Application Support/TextMate/KeyBindings.dict
+	/path/to/TextMate.app/Contents/Resources/KeyBindings.dict
+	~/Library/KeyBindings/DefaultKeyBinding.dict
+	/Library/KeyBindings/DefaultKeyBinding.dict
+	/System/Library/Frameworks/AppKit.framework/Resources/StandardKeyBinding.dict
+
+If you edit any of the above files you will need to relaunch TextMate (⌃⌘Q) before the changes take effect.
+
+## Find and extend selection
+
+These two action methods find the next/previous occurrence of what’s on the find clipboard and selects that, but preserves the existing selection.
+
+	findNextAndModifySelection:
+	findPreviousAndModifySelection:
+
+One could e.g. add this to the key bindings:
+
+	"@d" = ( "copySelectionToFindPboard:", "findNextAndModifySelection:" );
+
+## Indent-aware movement
+
+If you want (⇧)⌘⇠/⌘⇢ and ⌘⌫/⌘⌦ to ignore leading indent, you can add the following to your key bindings file:
+
+	"@\UF702"  = "moveToBeginningOfIndentedLine:";
+	"$@\UF702" = "moveToBeginningOfIndentedLineAndModifySelection:";
+	"@\UF703"  = "moveToEndOfIndentedLine:";
+	"$@\UF703" = "moveToEndOfIndentedLineAndModifySelection:";
+	"@\U007F"  = "deleteToBeginningOfIndentedLine:";
+	"@\UF728"  = "deleteToEndOfIndentedLine:";
