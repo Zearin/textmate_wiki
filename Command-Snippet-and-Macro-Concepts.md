@@ -22,3 +22,9 @@
 </pre>
 
 Probably not needed given the ability to do [this](http://pastie.org/private/jhzsmadg4m3rjns6bsfg)
+
+
+# $TM_* variables
+
+1. Add a TM_FILEPATHS_IN_WINDOW returning a list of paths to files open in a window
+2. 
