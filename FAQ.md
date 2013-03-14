@@ -101,18 +101,11 @@ No — `rmate` simply sends a file back and forth. Opening a folder is way more 
 
 ## Search
 
-### Is it possible to bring back "Replace & Find" and "Replace" buttons in the search window of TextMate 2.0?
-
-There will be a Replace action at some point. For now you can put the replace string on the regular clipboard and alternate between ⌘G (Find Next) and ⌘V (replace match) — only caveat is that it won’t work when the replace string is a format string (i.e. regular expression replacements).
-
 ### Is it possible to have Find in Folder follow symlinks?
 
-In the Find in Folder window is a pop-down menu next to the disclosure triangle in the results header.
-
-First item is “Symbolic Links” and causes the search to follow symbolic links.
+In the Find in Folder window is a drop-down menu button placed above the results. Enable “Follow Symbolic Links” in this menu.
 
 This will not resolve aliases created with Finder.
-
 
 ## Bundle Items
 
