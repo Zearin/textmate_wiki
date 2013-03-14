@@ -18,10 +18,6 @@ While TextMate is under development, things will generally be documented first i
 
 ## UI Concepts
 * [[Main Window]]
-* [[Preferences]]
-
-## Other concepts
-* [[Command Snippet and Macro Concepts]]
 
 ## Help files and other lists
 * [[.tm_properties]]
