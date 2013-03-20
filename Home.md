@@ -15,9 +15,3 @@ While TextMate is under development, things will generally be documented first i
 	Starting points to start contributing, these are self-contained and therefore are approachable without knowledge of the full codebase.
 *   [Writing Bug Reports](/textmate/textmate/wiki/writing_bug_reports)
 	How we prefer to see bug reports being written.
-
-## UI Concepts
-* [[Main Window]]
-
-## Help files and other lists
-* [[.tm_properties]]
