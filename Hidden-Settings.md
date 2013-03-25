@@ -96,7 +96,7 @@ One could, for example, add this to the key bindings:
 
 ## Indent-aware movement
 
-If you want <kbd>⇧⌘⇠</kbd>/<kbd>⇧⌘⇢</kbd> and <kbd>⌘⌫</kbd>/<kbd>⌘⌦</kbd> to ignore leading indentation, add the following to your key bindings file:
+If you want <kbd>⌘⇠</kbd>, <kbd>⇧⌘⇠</kbd>, <kbd>⌘⇢</kbd>, <kbd>⇧⌘⇢</kbd>, <kbd>⌘⌫</kbd>, and <kbd>⌘⌦</kbd> to ignore leading indentation, add the following to your key bindings file:
 
 	"@\UF702"  = "moveToBeginningOfIndentedLine:";
 	"$@\UF702" = "moveToBeginningOfIndentedLineAndModifySelection:";
