@@ -1,35 +1,48 @@
-Here are some self-contained projects that shouldn’t require too much knowledge about the code base, as they are fairly isolated:
+Here are some self-contained projects that shouldn’t require too much knowledge about the codebase, as they are fairly isolated.
 
-1.	Enhancing the syntax for format strings 
+1.	**Enhance the syntax for format strings**
 	The format string syntax allows replacements for variables as follows:
 
 		${«variable»/«regexp»/«replacement»/«flags»}
 
-	For example, to replace spaces with dashes in the `$TM_FULLNAME` variable we might do:
+	For example: to replace spaces with dashes in the variable `$TM_FULLNAME`, we might do:
 
 		${TM_FULLNAME/ /-/g}
 
-	It would be useful to support variables in the regular expression part of the expression. This is for `.tm_properties` where we e.g. can set `windowTitle` to a format string, and would like to set it e.g. to:
+	It would be useful to support variables in the regular expression part of the expression. This is for `.tm_properties` (where, for example, we could set `windowTitle` to a format string). The desired usage is something like the following:
 
 		windowTitle = "$TM_DISPLAYNAME — ${TM_FILEPATH/^$TM_PROJECT_DIRECTORY\///}"
 
-	Here we wish to chop off the `$TM_PROJECT_DIRECTORY` path prefix of `$TM_FILEPATH`.
+	Here, we wish to chop off the path prefix `$TM_PROJECT_DIRECTORY` from `$TM_FILEPATH`.
 
-	The support for format strings is in the [regexp][] framework. Look at [parser.cc][] and [format_string.cc][].
+	Support for format strings is in the [regexp][] framework. Look at [parser.cc][] and [format_string.cc][].
 
-2.	New (native) commit window.
+2.	**New (native) commit window.**
 
-	The current commit window is a separate application which is “always on top” and by not using the OakTextView we miss out on all the nice features of the Git commit message grammar like `fix→` for `fixup!`’s and highlights of too long summary lines.
+	The current commit window is a separate application which is “always on top”. By not using `OakTextView`, we’re missing out on all the nice features of the Git commit message grammar—like `fix→` for `fixup!`’s, and highlights from summary lines that are too long.
 
-6.	Custom data sources for file browser, e.g. Simplenote support or sftp, see [FSDataSource.h][].
+6.	**Custom data sources for file browser**
+		For example: Simplenote support, or sftp. See [FSDataSource.h][].
 
-7.  There is a pasteboard subclass which maintains a history ([OakPasteboard.h][]). This is used both for find and copy clipboards. This history is presently stored in user defaults which is bad (can grow big and affect performance). Instead it might be useful to use CoreData (if we were in the App Store then we could even offer users the facility to sync their clipboard history).
+7.	**Update clipboards to use CoreData**  
+	There’s a pasteboard subclass which maintains a history ([OakPasteboard.h][]). It’s used for both *find* and *copy* clipboards. 
+	
+	Presently, this history is stored in user defaults. This is bad! It can grow big, and worsen performance. Instead, it might be useful to use CoreData. (If we were in the App Store, we could even offer users the ability to sync their clipboard history.)
 
-8.  The clipboard history pop-ups (⌃⌥⌘V and ⌃⌥⌘F) are very crude ([OakPasteboardSelector.mm][]). It would be nice if one could “type to search”. Perhaps similar to Adium, where if you type a letter (with focus in the contact list) a search field appears above the list, which is what then filters the list.
+8.  **Update clipboard history pop-ups**
+	The clipboard history pop-ups (<kbd>⌃⌥⌘V</kbd> and <kbd>⌃⌥⌘F</kbd>) are very crude ([OakPasteboardSelector.mm][]). A “type to search” functionality would be much better.
+	
+	Adium provides a useful example. When the contact list has focus, typing a letter opens a search field above the list. As the user continues typing, the list is filtered accordingly.
 
-9.  Don’t store transient data in the clipboard history: <http://nspasteboard.org/Site/Transient.html>
+9.  **Don’t store transient data in the clipboard history**
+	<http://nspasteboard.org/Site/Transient.html>
 
-12. Implement `OakTabTriggerImage`. This should be an `NSImage` subclass that simply renders a tab trigger. This would be used in the menus and bundle item selector, probably also bundle editor. Making it an `NSImage` subclass should allow embedding it in attributed strings (which is what we use for the menu items as augmenting menu rendering is not really possible with Cocoa, only to replace the full item with a custom view). For how to go about this look e.g. at the implementation of [OakFileIconImage][].
+12. **Implement `OakTabTriggerImage`**
+	This should be an `NSImage` subclass which simply renders a tab trigger. It would be used in the menus and bundle item selector (and probably, also bundle editor). 
+	
+	Making it an `NSImage` subclass should allow embedding it in attributed strings. This is what we use for the menu items, since it isn’t really possible to augment menu rendering in Cocoa. (The only workaround is to replace the full item with a custom view.) 
+	
+	For how to do this, check out the implementation of [OakFileIconImage][].
 
 [regexp]:           https://github.com/textmate/textmate/tree/master/Frameworks/regexp
 [parser.cc]:        https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/parser.cc
