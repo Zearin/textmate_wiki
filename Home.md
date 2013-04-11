@@ -5,6 +5,12 @@ While TextMate is under development, things will generally be documented first i
 [change log]: https://github.com/textmate/textmate/blob/master/Applications/TextMate/about/Changes.md
 [manual]: http://manual.macromates.com/en/
 
+## Issue Tracker
+*   [[Issue Tracker]]
+	How the issue tracker should be used.
+*   [[Writing Bug Reports]]
+	How we prefer to see bug reports being written.
+
 ## Documentation
 *   [[Hidden Settings]]
 	Settings only accessible via the `defaults` command.
@@ -13,5 +19,3 @@ While TextMate is under development, things will generally be documented first i
 ## Contributing
 *   [[Hacking on the Code]]
 	Starting points to start contributing. These are self-contained, and are approachable without having to know the full codebase.
-*   [Writing Bug Reports](/textmate/textmate/wiki/writing_bug_reports)
-	How we prefer to see bug reports being written.
