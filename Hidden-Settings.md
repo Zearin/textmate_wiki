@@ -15,6 +15,12 @@ You can change these with the [`defaults`](http://developer.apple.com/documentat
 		defaults read com.macromates.TextMate.preview «key»
 
 
+## Disabling Auto-paired Characters
+
+When you type an opening brace, parenthesis, quote character, or similar, TextMate will insert the closing character, this can be configured per scope or globally disabled using:
+
+    defaults write com.macromates.TextMate.preview disableTypingPairs -bool YES
+
 ## Disabling Extended Attributes
 
 TextMate use extended attributes to store caret position, etc.
