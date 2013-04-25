@@ -45,6 +45,28 @@ These *must* be set as floats or integers--*not* strings.
 Both keys’ default value is `1`.
 
 
+## Controlling Font Smoothing
+
+Font smoothing refers to sub-pixel anti-alias on LCD screens. The algorithm Apple uses make light text on dark backgrounds look bolder than the same text on a bright background.
+
+For this reason TextMate disable font smoothing when using dark themes and the user is on a high-DPI display (retina Mac).
+
+You can control the behavior with:
+
+	defaults write com.macromates.TextMate.preview fontSmoothing «value»
+
+Here `«value»` can be:
+
+ * `0`: Always disabled.
+ * `1`: Always enabled.
+ * `2`: Disabled for dark themes.
+ * `3`: Disabled for dark themes on high-DPI displays (default).
+
+If you wish to restore the default value (`3`) it’s best to simply the following, instead of explicitly setting the value:
+
+	defaults delete com.macromates.TextMate.preview fontSmoothing
+
+
 ## Disabling Anti Alias
 
 Anti-alias can be disabled like so:
