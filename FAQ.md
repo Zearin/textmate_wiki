@@ -21,6 +21,8 @@ Even with soft wrap disabled, there are settings in the Source bundle to enable 
 
 ### Is it possible to disable auto-paired characters?
 
+_NOTE: As of a9411 (a nightly build), one can disable auto-paired characters using [a hidden setting](https://github.com/textmate/textmate/wiki/Hidden-Settings#disabling-auto-paired-characters), but this has not yet made its way into a normal release._
+
 Currently, there’s no global setting for this. You can, however, create a new settings item to disables them:
 
  1. **Open Bundle Editor:** _Bundles → Edit Bundles…_ (<kbd>⌃⌥⌘B</kbd>)
