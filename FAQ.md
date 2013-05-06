@@ -21,21 +21,7 @@ Even with soft wrap disabled, there are settings in the Source bundle to enable 
 
 ### Is it possible to disable auto-paired characters?
 
-_NOTE: As of a9411 (a nightly build), one can disable auto-paired characters using [a hidden setting](https://github.com/textmate/textmate/wiki/Hidden-Settings#disabling-auto-paired-characters), but this has not yet made its way into a normal release._
-
-Currently, there’s no global setting for this. You can, however, create a new settings item to disables them:
-
- 1. **Open Bundle Editor:** _Bundles → Edit Bundles…_ (<kbd>⌃⌥⌘B</kbd>)
- 2. **Create a new bundle:** File → New (<kbd>⌘N</kbd>) and select _Bundle_
- 3. **Create a new setting in that bundle:** File → New (<kbd>⌘N</kbd>) and select _Setting_
- 4. **Set _Scope Selector_ to `*`** (matches everywhere)
- 5. **Set the content to the following property list:**
-
-		{   
-			smartTypingPairs = ( );
-		}
-
- 6. **Save the new item:** _File → Save_ (<kbd>⌘S</kbd>).
+See [hidden settings](https://github.com/textmate/textmate/wiki/Hidden-Settings#disabling-auto-paired-characters).
 
 ### In TextMate 1.x, a return between `{}` was treated specially, giving you an indented caret on a blank line. This no longer works in the alpha.
 
@@ -83,9 +69,21 @@ This is similar to how Finder treats links. There’s currently no way to have t
 
 ### I cannot get my bundles to appear inside TextMate. 
 
-First: make sure you are placing them in the [right location](http://blog.macromates.com/2011/locating-bundles/ "TextMate Blog » Locating Bundles"). 
+For standard bundles you should install via Preferences → Bundles.
 
-Second: make sure they’re on a drive that supports fs-events. (Generally, this means a local HFS+ drive.) However, there does seem to be a bug in HFS+ where fs-events fails to work after a user has synced folders with Dropbox.
+Third party bundles can be double-clicked which installs them in:
+
+	~/Library/Application Support/Avian/Pristine Copy/Bundles
+
+If you wish to edit the bundles and share your changes you should install (git clone) them to:
+
+	~/Library/Application Support/Avian/Bundles
+
+This way TextMate won’t create delta files (which are not useful for sharing).
+
+If you manually install bundles and they do not show up, your file system may lack support for fs-events. In this case you will need to delete the cache and relaunch TextMate:
+
+	rm ~/Library/Caches/com.macromates.TextMate/BundlesIndex.plist
 
 ### I am seeing incorrect results after using a Replace All in Find in Folder.
 
