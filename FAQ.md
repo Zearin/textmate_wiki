@@ -19,6 +19,8 @@ The **View** menu has a setting to toggle soft wrap. (It stores the setting for 
 
 Even with soft wrap disabled, there are settings in the Source bundle to enable indented soft wrap for comments in source files. These can be disabled by unchecking the “Enable this item” checkbox in the bundle editor.
 
+For more info see this [mailing list post about indented soft wrap](http://lists.macromates.com/textmate/2011-December/033547.html).
+
 ### Is it possible to disable auto-paired characters?
 
 See [hidden settings](https://github.com/textmate/textmate/wiki/Hidden-Settings#disabling-auto-paired-characters).
