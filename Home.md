@@ -15,6 +15,7 @@ While TextMate is under development, things will generally be documented first i
 *   [[Hidden Settings]]
 	Settings only accessible via the `defaults` command.
 *   [[FAQ]]
+*   [[Reverting to Defaults]]
 
 ## Contributing
 *   [[Hacking on the Code]]
