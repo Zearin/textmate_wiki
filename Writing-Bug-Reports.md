@@ -1,3 +1,5 @@
+_Before reporting a bug try first [[reverting to defaults]]_
+
 A bug report should contain these 4 things:
 
 1. **Steps to reproduce**: You should give **detailed** steps on how someone can reproduce the problem.
