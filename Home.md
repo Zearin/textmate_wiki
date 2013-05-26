@@ -16,6 +16,7 @@ While TextMate is under development, things will generally be documented first i
 	Settings only accessible via the `defaults` command.
 *   [[FAQ]]
 *   [[Reverting to Defaults]]
+*   [[Enable Logging]]
 
 ## Contributing
 *   [[Hacking on the Code]]
