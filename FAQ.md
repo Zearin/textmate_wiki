@@ -1,19 +1,23 @@
 ## Editing
 
-### The new completion method gets confused when variables (etc.) are prefixed with a character in some cases, but not others. Is there a way to improve this?
+### Completion considers `$var`, `@var`, and `var` as different
 
 [This article](http://blog.macromates.com/2012/clever-completion/ "TextMate Blog » Clever Completion") explains how (word) “units” are setup in 2.0. This is what completion uses. For example ‘:symbol’ is different than ‘symbol’, so one isn’t suggested when completing the other.
 
-There is no way to “fix” this, other than to change what TextMate considers a unit. The source bundle has these settings, but they also affects word movement, double-click, etc.
+The way to change this is to change what TextMate considers a unit. The source bundle has the default settings. You can add a new setting scoped to `punctuation`, and make it `{ characterClass = 'punctuation'; }`, that way all the punctuation (like leading `$` in a `$variable`) is assigned a different character class than the rest of the unit, effectively making it two different units.
 
-### Is is possible to have trailing whitespace removed when a file is saved?
+Be aware though that definition of units are also used for word movement (<kbd>⌥←</kbd>/<kbd>⌥→</kbd>) and word selection (<kbd>⌃W</kbd>).
+
+### How to strip trailing whitespace on save?
 
 There are currently two possible ways to do this (both of which use the semantic class system):
 
 1. You can use `callback.document.export`, which will filter the document that’s saved to disk (but *won’t* update the copy inside TextMate)
 1. The inverse is also possible: `callback.document.will-save` (which will update the copy in TextMate *before* saving)
 
-### Is it possible to disable soft wrap?
+Here is [a bundle to strip whitespace](https://github.com/bomberstudios/Strip-Whitespace-On-Save.tmbundle) that makes use of the `callback.document.will-save` class.
+
+### How to disable soft wrap?
 
 The **View** menu has a setting to toggle soft wrap. (It stores the setting for the “current file type”.)
 
@@ -21,7 +25,7 @@ Even with soft wrap disabled, there are settings in the Source bundle to enable 
 
 For more info see this [mailing list post about indented soft wrap](http://lists.macromates.com/textmate/2011-December/033547.html).
 
-### Is it possible to disable auto-paired characters?
+### How to disable auto-paired characters?
 
 See [hidden settings](https://github.com/textmate/textmate/wiki/Hidden-Settings#disabling-auto-paired-characters).
 
@@ -94,10 +98,6 @@ Find in Folder currently expects all files to be UTF-8 encoded. If your files ar
 ### How do I get a web preview window that updates as I edit an HTML document?
 
 The current plan is to generalize the update mechanism through the semantic class system, so it can be used in more cases. However, this isn’t yet implemented, and subject to change.
-
-### Will printing support be improved from 1.x?
-
-If it’s not there and was there in 1.x, we most likely simply haven’t gotten around it yet. (Of *course* 2.0 will get a printing feature!)
 
 ### Can [rmate](http://blog.macromates.com/2011/mate-and-rmate/ "TextMate Blog » mate and rmate") be used to open directories?
 
