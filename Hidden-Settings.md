@@ -31,8 +31,15 @@ If you don’t want these files, you can disable the use of extended attributes.
 
 So, if we wanted to disable extended attributes for files under `/net/`:
 
-	defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
+    defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
 
+## File Browser Source List Styling
+
+The file browser can use the “source list” style as seen in Finder’s sidebar:
+
+    defaults write com.macromates.TextMate.preview fileBrowserStyle SourceList
+
+If you want to revert to the standard look, delete the `fileBrowserStyle` key.
 
 ## Changing Line Height
 
