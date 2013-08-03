@@ -33,6 +33,12 @@ So, if we wanted to disable extended attributes for files under `/net/`:
 
     defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
 
+## Searching “Selection” Instead of “Document” by Default
+
+Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
+
+    defaults write findInSelectionByDefault -bool YES
+
 ## File Browser Source List Styling
 
 The file browser can use the “source list” style as seen in Finder’s sidebar:
