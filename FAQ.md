@@ -91,15 +91,11 @@ If you manually install bundles and they do not show up, your file system may la
 
 	rm ~/Library/Caches/com.macromates.TextMate/BundlesIndex.plist
 
-### I am seeing incorrect results after using a Replace All in Find in Folder.
-
-Find in Folder currently expects all files to be UTF-8 encoded. If your files aren’t, you should avoid using this feature for now.
-
 ### How do I get a web preview window that updates as I edit an HTML document?
 
 The current plan is to generalize the update mechanism through the semantic class system, so it can be used in more cases. However, this isn’t yet implemented, and subject to change.
 
-### Can [rmate](http://blog.macromates.com/2011/mate-and-rmate/ "TextMate Blog » mate and rmate") be used to open directories?
+### Can [rmate](https://github.com/textmate/rmate) be used to open directories?
 
 No — `rmate` simply sends a file back and forth. Opening a folder is way more complex.
 
