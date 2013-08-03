@@ -37,7 +37,7 @@ So, if we wanted to disable extended attributes for files under `/net/`:
 
 Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
 
-    defaults write findInSelectionByDefault -bool YES
+    defaults write com.macromates.TextMate.preview findInSelectionByDefault -bool YES
 
 ## File Browser Source List Styling
 
