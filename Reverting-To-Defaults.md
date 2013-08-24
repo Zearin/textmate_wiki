@@ -2,7 +2,8 @@ Many problems can be solved by reverting to default settings. This is done by qu
 
  1. `~/Library/Application Support/Avian`
  1. `~/Library/Application Support/TextMate`
- 1. `~/Library/Caches/com.macromates.TextMate/BundlesIndex.plist`
+ 1. `~/Library/Caches/com.macromates.TextMate/BundlesIndex.binary`
+ 1. `~/Library/Caches/com.macromates.TextMate/BundlesIndex.plist` (v2.0-alpha.9465 and earlier)
  1. `~/Library/Preferences/com.macromates.textmate.plist`
  1. `~/.tm_properties`
 
