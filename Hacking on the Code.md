@@ -1,23 +1,5 @@
 Here are some self-contained projects that shouldn’t require too much knowledge about the codebase, as they are fairly isolated.
 
-1.	**Enhance the syntax for format strings**
-	
-	The format string syntax allows replacements for variables as follows:
-
-		${«variable»/«regexp»/«replacement»/«flags»}
-
-	For example: to replace spaces with dashes in the variable `$TM_FULLNAME`, we might do:
-
-		${TM_FULLNAME/ /-/g}
-
-	It would be useful to support variables in the regular expression part of the expression. This is for `.tm_properties` (where, for example, we could set `windowTitle` to a format string). The desired usage is something like the following:
-
-		windowTitle = "$TM_DISPLAYNAME — ${TM_FILEPATH/^$TM_PROJECT_DIRECTORY\///}"
-
-	Here, we wish to chop off the path prefix `$TM_PROJECT_DIRECTORY` from `$TM_FILEPATH`.
-
-	Support for format strings is in the [regexp][] framework. Look at [parser.cc][] and [format_string.cc][].
-
 2.	**New (native) commit window.**
 
 	The current commit window is a separate application which is “always on top”. By not using `OakTextView`, we’re missing out on all the nice features of the Git commit message grammar—like `fix→` for `fixup!`’s, and highlights from summary lines that are too long.
@@ -50,9 +32,6 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 	
 	For how to do this, check out the implementation of [OakFileIconImage][].
 
-[regexp]:           https://github.com/textmate/textmate/tree/master/Frameworks/regexp
-[parser.cc]:        https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/parser.cc
-[format_string.cc]: https://github.com/textmate/textmate/blob/master/Frameworks/regexp/src/format_string.cc
 [FSDataSource.h]:   https://github.com/textmate/textmate/blob/master/Frameworks/OakFileBrowser/src/io/FSDataSource.h
 [OakPasteboard.h]:  https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboard.h
 [OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
