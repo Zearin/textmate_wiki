@@ -17,6 +17,16 @@ A bug report should contain these 4 things:
 
 See [this great article](http://www.nngroup.com/articles/microcontent-how-to-write-headlines-page-titles-and-subject-lines/) (by Jakob Nielsen) on writing headlines, page titles, and subject lines.
 
+
+## Adding Pictures
+
+As they say, a picture is worth a thousand words, but that is **not** what we want in a succinct bug report! Not to mention the plethora of other issues related to submitting bug reports as images.
+
+So only include pictures or movies as extra material when it clarifies the bug report in ways that cannot be expressed in text, for example if text is garbled, it is useful to include an image of how exactly it gets garbled.
+
+Opening an issue saying “syntax highlight is incorrect” with nothing besides a screenshot is not acceptable.
+
+
 ## Crashes or Hangs
 
 Unless you have steps to reproduce, there’s generally no need to report a crash. We already get crash reports from users who haven’t opted out. 
@@ -45,11 +55,3 @@ If you need to *generate* a spin report while TextMate is locked up, here’s ho
 1. select TextMate
 1. select then _Sample Process_ (<kbd>⌥⌘S</kbd>).
 1. paste the spin report online via [https://gist.github.com]; GitHub’s issues don’t allow file attachments
-
-## Adding Pictures
-
-As they say, a picture is worth a thousand words, but that is **not** what we want in a succinct bug report! Not to mention the plethora of other issues related to submitting bug reports as images.
-
-So only include pictures or movies as extra material when it clarifies the bug report in ways that cannot be expressed in text, for example if text is garbled, it is useful to include an image of how exactly it gets garbled.
-
-Opening an issue saying “syntax highlight is incorrect” with nothing besides a screenshot is not acceptable.
