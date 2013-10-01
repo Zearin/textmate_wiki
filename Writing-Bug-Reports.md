@@ -48,6 +48,8 @@ If you need to *generate* a spin report while TextMate is locked up, here’s ho
 
 ## Adding Pictures
 
-If you include pictures or movies, please make sure the bug report can stand on its own. A report is only useful if it can be understood even without images or movies. 
+As they say, a picture is worth a thousand words, but that is **not** what we want in a succinct bug report! Not to mention the plethora of other issues related to submitting bug reports as images.
 
-For example: Opening an issue “syntax highlight is incorrect” with nothing besides a screenshot isn’t useful.
+So only include pictures or movies as extra material when it clarifies the bug report in ways that cannot be expressed in text, for example if text is garbled, it is useful to include an image of how exactly it gets garbled.
+
+Opening an issue saying “syntax highlight is incorrect” with nothing besides a screenshot is not acceptable.
