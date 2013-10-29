@@ -39,6 +39,16 @@ Previously using <kbd>⌘F</kbd> with a multiline selection would automatically 
 
     defaults write com.macromates.TextMate.preview findInSelectionByDefault -bool YES
 
+## File Browser Single Click to Open
+
+Opening files in the file browser can be done by single-clicking the icon. If you think the click-target is too small, you can make it open by clicking the text instead, this is activated by running the following in a terminal:
+
+    defaults write com.macromates.TextMate.preview fileBrowserSingleClickToOpen -bool true
+
+If you wish to select items you either need to click to the left of the text, or hold down command (⌘) when clicking the item’s text.
+
+Holding down command (⌘) while clicking the icon will reveal the file in Finder regardless of the above setting.
+
 ## File Browser Source List Styling
 
 The file browser can use the “source list” style as seen in Finder’s sidebar:
