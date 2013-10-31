@@ -4,9 +4,16 @@
 
 [This article](http://blog.macromates.com/2012/clever-completion/ "TextMate Blog » Clever Completion") explains how (word) “units” are setup in 2.0. This is what completion uses. For example ‘:symbol’ is different than ‘symbol’, so one isn’t suggested when completing the other.
 
-The way to change this is to change what TextMate considers a unit. The source bundle has the default settings. You can add a new setting scoped to `punctuation`, and make it `{ characterClass = 'punctuation'; }`, that way all the punctuation (like leading `$` in a `$variable`) is assigned a different character class than the rest of the unit, effectively making it two different units.
+If you do not wish that punctuation is considered part of (completion) units then:
 
-Be aware though that definition of units are also used for word movement (<kbd>⌥←</kbd>/<kbd>⌥→</kbd>) and word selection (<kbd>⌃W</kbd>).
+1. From the menu bar select: Bundles → Edit Bundles…
+2. In the column browser select: Source → Settings → Character
+Class: Punctuation
+3. In the drawer change scope selector from `punctuation.separator`
+to just `punctuation`
+4. Press <kbd>⌘S</kbd> (Save) and close bundle editor
+
+Be aware that definition of units are also used for word movement (<kbd>⌥←</kbd>/<kbd>⌥→</kbd>) and word selection (<kbd>⌃W</kbd>).
 
 ### How to strip trailing whitespace on save?
 
