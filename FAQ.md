@@ -120,3 +120,24 @@ This *will not* resolve aliases created with Finder.
 ### Using Duplicate Line with multiple carets produces an error.
 
 Duplicate Line is implemented as a command. Currently, these aren’t supported (per se) for multiple carets.
+
+
+## Migrating from 1.x
+
+### Moving Over Personal Bundles
+
+*Use this method to move over personally created bundles, check `Preferences → Bundles` to install other bundles.*
+
+Bundles you created in 1.x will be at:
+
+    ~/Library/Application Support/TextMate/Bundles
+
+And need to be moved to:
+
+    ~/Library/Application Support/Avian/Bundles
+
+**Note:**
+
+* The ~ character in these paths refers to your home directory (/Users/«yourname»/).
+* The Library folder may be hidden by default, if so you can access it from the Go menu in Finder while holding down option.
+* The directories under Application Support may not exist on your system, should they not you should create them.
