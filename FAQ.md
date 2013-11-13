@@ -15,6 +15,16 @@ to just `punctuation`
 
 Be aware that definition of units are also used for word movement (<kbd>⌥←</kbd>/<kbd>⌥→</kbd>) and word selection (<kbd>⌃W</kbd>).
 
+### How do I set which characters are considered to be part of a word?
+
+When determining what constitutes a word the `characterClass` setting is first consulted which is described in the previous FAQ item, if this doesn't apply then the `wordCharacters` setting is consulted.
+
+You can set `wordCharacters` by creating a new settings item in the bundle editor with the value:
+
+    { wordCharacters = «value»; }
+
+The `«value»` is a string of which characters should be considered word characters, these would be in addition to those already defined as word characters. You can set the scope selector if you wish to limit the scope in which the characters should be considered a word character. This is used for completion, word movement (<kbd>⌥←</kbd>/<kbd>⌥→</kbd>) and word selection (<kbd>⌃W</kbd>).
+
 ### How to strip trailing whitespace on save?
 
 There are currently two possible ways to do this (both of which use the semantic class system):
