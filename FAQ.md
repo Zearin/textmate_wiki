@@ -65,7 +65,7 @@ If you’d rather disable the indentations entirely, do the same thing without g
 
 ### Where have the project files from 1.x gone?
 
-Explicit project files aren’t currently supported. When you open a folder, the folder is treated as a project.  I.e. the file chooser (<kbd>⌘T</kbd>) and folder search (<kbd>⇧⌘F</kbd>) default to the folder.
+Explicit project files aren’t currently supported. When you open a folder, the folder is treated as a project.  I.e. the file chooser (<kbd>⌘T</kbd>) and folder search (<kbd>⇧⌘F</kbd>) default to the folder, [see the manual for more details](http://manual.textmate.org/projects#projects).
 
 You can customize settings for a folder with a [.tm_properties file](http://blog.macromates.com/2011/git-style-configuration/ "TextMate Blog » Git Style Configuration").
 
