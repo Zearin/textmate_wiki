@@ -54,11 +54,11 @@ This is a complicated issue, explained best in [this mailing list post](http://l
 
 The indentation rules have been given a higher importance in TextMate 2. As a result, some language rules aren’t up-to-date with the new precedence. For bundle authors (and those that want to get their hands dirty) [the guide to indentation rules](http://manual.macromates.com/en/appendix#indentation_rules.html "TextMate Manual » Appendix") is in the 1.x manual.
 
-Of course, indentation rules make no sense in certain languages--Python’s indentation, for example, is based on whitespace, rather than other delimiters. For these languages, you can disable the auto-indentation entirely by adding a new settings item (scoped to the language) as follows:
+Of course, indentation rules make no sense in certain languages--Python’s indentation, for example, is based on whitespace, rather than other delimiters. For these languages, you can disable the auto correction of indentation by adding a new settings item (scoped to the language) as follows:
 
 	{ disableIndentCorrections = :true; }
 
-If you’d rather disable the indentations entirely, do the same thing without giving it a scope.
+If you’d rather disable it for all languages, do the same thing without giving it a scope.
 
 
 ## Projects
