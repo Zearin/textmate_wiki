@@ -33,6 +33,16 @@ So, if we wanted to disable extended attributes for files under `/net/`:
 
     defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
 
+## Disabling Tab Re-ordering
+
+When opening a document it will be placed to the right of the current one (in the tab bar) even if the document being opened is already in the tab bar, this is to make ⌘W work to “close and go back” without having to keep a list of previously selected tabs.
+
+This feature can now be disabled using:
+
+    defaults write com.macromates.TextMate.preview disableTabReordering -bool YES
+
+Note though that if one selects multiple documents to open then it will potentially re-order the tab bar so that the documents selected are adjacent.
+
 ## Searching “Selection” Instead of “Document” by Default
 
 Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
