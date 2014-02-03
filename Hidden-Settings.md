@@ -67,6 +67,12 @@ The file browser can use the “source list” style as seen in Finder’s sideb
 
 If you want to revert to the standard look, delete the `fileBrowserStyle` key.
 
+## File Browser Open (Zoom) Animation
+
+The zoom animation shown when opening items can be disabled by running this in a terminal:
+
+    defaults write com.macromates.TextMate.preview fileBrowserOpenAnimationDisabled -bool YES
+
 ## Changing Line Height
 
 You can adjust line height by changing the `fontLeadingDelta` and `fontAscentDelta` defaults keys.
