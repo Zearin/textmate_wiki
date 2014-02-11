@@ -1,5 +1,7 @@
 # Issue Tracker
 
+**As of this writing, the Issue Tracker is not public, see <http://macromates.com/support> for how to get support or report issues.**
+
 ## Bug Reports
 
 The issue tracker at GitHub is for tracking bugs. If you wish to report a bug, please first read [how we want bug reports written](http://kb.textmate.org/writing_bug_reports).
