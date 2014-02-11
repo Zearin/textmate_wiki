@@ -43,6 +43,12 @@ This feature can now be disabled using:
 
 Note though that if one selects multiple documents to open then it will potentially re-order the tab bar so that the documents selected are adjacent.
 
+## Disabling Restore of Open Tabs
+
+When opening a folder TextMate will restore open tabs and file browser state from the last time you had this folder open. The behavior can be disabled using:
+
+    defaults write com.macromates.TextMate.preview disableFolderStateRestore -bool YES
+
 ## Searching “Selection” Instead of “Document” by Default
 
 Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
