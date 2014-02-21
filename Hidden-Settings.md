@@ -65,6 +65,12 @@ If you wish to select items you either need to click to the left of the text, or
 
 Holding down command (⌘) while clicking the icon will reveal the file in Finder regardless of the above setting.
 
+# Expandable Links in File Browser 
+
+If you want the file browser to show symbolic links as expandable items then run the following in a terminal:
+
+    defaults write com.macromates.TextMate.preview allowExpandingLinks -bool YES
+
 ## File Browser Source List Styling
 
 The file browser can use the “source list” style as seen in Finder’s sidebar:
