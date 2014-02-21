@@ -8,12 +8,6 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 		
 	For example: Simplenote support, or sftp. See [FSDataSource.h][].
 
-7.	**Update clipboards to use CoreData**  
-	
-	There’s a pasteboard subclass which maintains a history ([OakPasteboard.h][]). It’s used for both *find* and *copy* clipboards. 
-	
-	Presently, this history is stored in user defaults. This is bad! It can grow big, and worsen performance. Instead, it might be useful to use CoreData. (If we were in the App Store, we could even offer users the ability to sync their clipboard history.)
-
 8.  **Update clipboard history pop-ups**
 	
 	The clipboard history pop-ups (<kbd>⌃⌥⌘V</kbd> and <kbd>⌃⌥⌘F</kbd>) are very crude ([OakPasteboardSelector.mm][]). A “type to search” functionality would be much better.
@@ -29,6 +23,5 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 	For how to do this, check out the implementation of [OakFileIconImage][].
 
 [FSDataSource.h]:   https://github.com/textmate/textmate/blob/master/Frameworks/OakFileBrowser/src/io/FSDataSource.h
-[OakPasteboard.h]:  https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboard.h
 [OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
 [OakFileIconImage]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakFileIconImage.mm
