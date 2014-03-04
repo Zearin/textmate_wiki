@@ -33,16 +33,6 @@ So, if we wanted to disable extended attributes for files under `/net/`:
 
     defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
 
-## Disabling Tab Re-ordering
-
-When opening a document it will be placed to the right of the current one (in the tab bar) even if the document being opened is already in the tab bar, this is to make ⌘W work to “close and go back” without having to keep a list of previously selected tabs.
-
-This feature can now be disabled using:
-
-    defaults write com.macromates.TextMate.preview disableTabReordering -bool YES
-
-Note though that if one selects multiple documents to open then it will potentially re-order the tab bar so that the documents selected are adjacent.
-
 ## Disabling Restore of Open Tabs
 
 When opening a folder TextMate will restore open tabs and file browser state from the last time you had this folder open. The behavior can be disabled using:
@@ -54,22 +44,6 @@ When opening a folder TextMate will restore open tabs and file browser state fro
 Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
 
     defaults write com.macromates.TextMate.preview findInSelectionByDefault -bool YES
-
-## File Browser Single Click to Open
-
-Opening files in the file browser can be done by single-clicking the icon. If you think the click-target is too small, you can make it open by clicking the text instead, this is activated by running the following in a terminal:
-
-    defaults write com.macromates.TextMate.preview fileBrowserSingleClickToOpen -bool true
-
-If you wish to select items you either need to click to the left of the text, or hold down command (⌘) when clicking the item’s text.
-
-Holding down command (⌘) while clicking the icon will reveal the file in Finder regardless of the above setting.
-
-# Expandable Links in File Browser 
-
-If you want the file browser to show symbolic links as expandable items then run the following in a terminal:
-
-    defaults write com.macromates.TextMate.preview allowExpandingLinks -bool YES
 
 ## File Browser Source List Styling
 
