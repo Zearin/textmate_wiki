@@ -8,12 +8,6 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 		
 	For example: Simplenote support, or sftp. See [FSDataSource.h][].
 
-8.  **Update clipboard history pop-ups**
-	
-	The clipboard history pop-ups (<kbd>⌃⌥⌘V</kbd> and <kbd>⌃⌥⌘F</kbd>) are very crude ([OakPasteboardSelector.mm][]). A “type to search” functionality would be much better.
-	
-	Adium provides a useful example. When the contact list has focus, typing a letter opens a search field above the list. As the user continues typing, the list is filtered accordingly.
-
 12. **Implement `OakTabTriggerImage`**
 	
 	This should be an `NSImage` subclass which simply renders a tab trigger. It would be used in the menus and bundle item selector (and probably, also bundle editor). 
