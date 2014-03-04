@@ -101,7 +101,7 @@ Anti-alias can be disabled like so:
 
 ## Disabling Clipboard History
 
-When you relaunch TextMate, it remembers the clipboard history from your last session. This is stored in its user defaults.
+When you relaunch TextMate, it remembers the clipboard history from your last session. This is stored in `~/Library/Application Support/TextMate/ClipboardHistory.db`.
 
 If you dislike this (for example, if you often copy & paste passwords), you can disable this feature:
 
