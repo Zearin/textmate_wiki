@@ -1,9 +1,5 @@
 Here are some self-contained projects that shouldn’t require too much knowledge about the codebase, as they are fairly isolated.
 
-2.	**New (native) commit window.**
-
-	The current commit window is a separate application which is “always on top”. By not using `OakTextView`, we’re missing out on all the nice features of the Git commit message grammar—like `fix→` for `fixup!`’s, and highlights from summary lines that are too long.
-
 6.	**Custom data sources for file browser**
 		
 	For example: Simplenote support, or sftp. See [FSDataSource.h][].
