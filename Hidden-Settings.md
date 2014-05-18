@@ -26,6 +26,7 @@ You can change these with the [`defaults`](http://developer.apple.com/documentat
 | `fileBrowserOpenAnimationDisabled`  | This is for the zoom animation shown when opening items via TextMate’s file browser. | boolean |
 | `findInSelectionByDefault`          | Set this if you want <kbd>⌘F</kbd> with a multiline selection to automatically set the “in” pop-up to “selection”. | boolean |
 | `fileBrowserStyle`                  | Set this key to `SourceList` if you want TextMate’s file browser to use the “source list” style as seen in Finder’s sidebar. | string |
+| `hideStatusBar`                     | Disable the status bar shown below the text area. | boolean |
 | `fontAscentDelta`                   | Increase/decrease TextMate’s default line ascend | float or integer |
 | `fontLeadingDelta`                  | Increase/decrease TextMate’s default line lead   | float or integer |
 | `environmentWhitelist`              | Colon-separated list of environment variables that TextMate should pass to a child process. Items with an asterisk are treated as a glob. You can use `$default` for the default whitelist. Example: `$default:MANPATH:*EDITOR`. TextMate sets up `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If you whitelist any of these, then the variable (if set) will inherit from the parent process instead. | string |
