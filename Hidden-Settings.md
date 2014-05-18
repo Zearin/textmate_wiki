@@ -15,11 +15,22 @@ You can change these with the [`defaults`](http://developer.apple.com/documentat
 		defaults read com.macromates.TextMate.preview «key»
 
 
-## Disabling Auto-paired Characters
+## Settings
 
-When you type an opening brace, parenthesis, quote character, or similar, TextMate will insert the closing character, this can be configured per scope or globally disabled using:
+| Key           | Description  | Type  |
+| ------------- | ------------ | ----- |
+| `disableTypingPairs`                | When you type an opening brace, parenthesis, quote character, or similar, TextMate will insert the closing character. | boolean |
+| `disableFolderStateRestore`         | When opening a folder TextMate will restore open tabs and file browser state from the last time you had this folder open. | boolean |
+| `disableAntiAlias`                  | Disable font anti-alias. | boolean |
+| `disablePersistentClipboardHistory` | By default TextMate stores clipboard history in `~/Library/Application Support/TextMate/ClipboardHistory.db`. | boolean |
+| `fileBrowserOpenAnimationDisabled`  | This is for the zoom animation shown when opening items via TextMate’s file browser. | boolean |
+| `findInSelectionByDefault`          | Set this if you want <kbd>⌘F</kbd> with a multiline selection to automatically set the “in” pop-up to “selection”. | boolean |
+| `fileBrowserStyle`                  | Set this key to `SourceList` if you want TextMate’s file browser to use the “source list” style as seen in Finder’s sidebar. | string |
+| `fontAscentDelta`                   | Increase/decrease TextMate’s default line ascend | float or integer |
+| `fontLeadingDelta`                  | Increase/decrease TextMate’s default line lead   | float or integer |
+| `environmentWhitelist`              | Colon-separated list of environment variables that TextMate should pass to a child process. Items with an asterisk are treated as a glob. You can use `$default` for the default whitelist. Example: `$default:MANPATH:*EDITOR`. TextMate sets up `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If you whitelist any of these, then the variable (if set) will inherit from the parent process instead. | string |
 
-    defaults write com.macromates.TextMate.preview disableTypingPairs -bool YES
+For the integer and float keys, you **must** use `-float` or `-integer` when setting the value.
 
 ## Disabling Extended Attributes
 
@@ -32,42 +43,6 @@ If you don’t want these files, you can disable the use of extended attributes.
 So, if we wanted to disable extended attributes for files under `/net/`:
 
     defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
-
-## Disabling Restore of Open Tabs
-
-When opening a folder TextMate will restore open tabs and file browser state from the last time you had this folder open. The behavior can be disabled using:
-
-    defaults write com.macromates.TextMate.preview disableFolderStateRestore -bool YES
-
-## Searching “Selection” Instead of “Document” by Default
-
-Previously using <kbd>⌘F</kbd> with a multiline selection would automatically set the “in” pop-up to “selection”. This is no longer the case, but can be brought back by running:
-
-    defaults write com.macromates.TextMate.preview findInSelectionByDefault -bool YES
-
-## File Browser Source List Styling
-
-The file browser can use the “source list” style as seen in Finder’s sidebar:
-
-    defaults write com.macromates.TextMate.preview fileBrowserStyle SourceList
-
-If you want to revert to the standard look, delete the `fileBrowserStyle` key.
-
-## File Browser Open (Zoom) Animation
-
-The zoom animation shown when opening items can be disabled by running this in a terminal:
-
-    defaults write com.macromates.TextMate.preview fileBrowserOpenAnimationDisabled -bool YES
-
-## Changing Line Height
-
-You can adjust line height by changing the `fontLeadingDelta` and `fontAscentDelta` defaults keys.
-
-These *must* be set as floats or integers--*not* strings.
-
-    defaults write com.macromates.TextMate.preview fontLeadingDelta -float 0
-
-Both keys’ default value is `1`.
 
 
 ## Controlling Font Smoothing
@@ -90,36 +65,6 @@ Here `«value»` can be:
 If you wish to restore the default value (`3`) it’s better to run the following, rather than explicitly setting the value to `3`:
 
 	defaults delete com.macromates.TextMate.preview fontSmoothing
-
-
-## Disabling Anti Alias
-
-Anti-alias can be disabled like so:
-
-	defaults write com.macromates.TextMate.preview disableAntiAlias -bool YES
-
-
-## Disabling Clipboard History
-
-When you relaunch TextMate, it remembers the clipboard history from your last session. This is stored in `~/Library/Application Support/TextMate/ClipboardHistory.db`.
-
-If you dislike this (for example, if you often copy & paste passwords), you can disable this feature:
-
-	defaults write com.macromates.TextMate.preview disablePersistentClipboardHistory -bool YES
-
-## Inheriting Environment Variables
-
-When TextMate run commands, it creates a “clean” environment, which only inherits a select few variables from its parent process. 
-
-You can alter the whitelist via the `environmentWhitelist` defaults key. This is a colon-separated list of variables to inherit. If an item in the list contains an asterisk, then it is treated as a glob.
-
-Example:
-
-	defaults write com.macromates.TextMate.preview environmentWhitelist '$default:MANPATH:*EDITOR'
-
-Here, `$default` will expand to TextMate’s default whitelist.
-
-Normally, TextMate sets up `HOME`, `PATH`, `TMPDIR`, `LOGNAME`, and `USER`. If you whitelist any of these, then the variable (if set) will inherit from the parent process instead.
 
 
 # Keybindings
