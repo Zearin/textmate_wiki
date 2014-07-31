@@ -24,7 +24,7 @@ You can change these with the [`defaults`](http://developer.apple.com/documentat
 | `disableAntiAlias`                  | Disable font anti-alias. | boolean |
 | `disablePersistentClipboardHistory` | By default TextMate stores clipboard history in `~/Library/Application Support/TextMate/ClipboardHistory.db`. | boolean |
 | `fileBrowserOpenAnimationDisabled`  | This is for the zoom animation shown when opening items via TextMate’s file browser. | boolean |
-| `findInSelectionByDefault`          | Set this if you want <kbd>⌘F</kbd> with a multiline selection to automatically set the “in” pop-up to “selection”. | boolean |
+| `alwaysFindInDocument `             | Set this if you want <kbd>⌘F</kbd> to always set the “in” pop-up to “document” (by default it searches “selection” when there is a multi-line selection. | boolean |
 | `fileBrowserStyle`                  | Set this key to `SourceList` if you want TextMate’s file browser to use the “source list” style as seen in Finder’s sidebar. | string |
 | `hideStatusBar`                     | Disable the status bar shown below the text area. | boolean |
 | `fontAscentDelta`                   | Increase/decrease TextMate’s default line ascend | float or integer |
