@@ -37,20 +37,23 @@ For the integer and float keys, you **must** use `-float` or `-integer` when set
 
 TextMate use extended attributes to store caret position, etc.
 
-On file systems which don’t support extended attributes (most network file systems), OS X will create an auxiliary file with a dot-underscore prefix (e.g. `._filename`).
+On file systems which don’t support extended attributes (most network file systems), OS X will create an auxiliary file with a dot-underscore prefix (e.g., `.«_filename»`).
 
-If you don’t want these files, you can disable the use of extended attributes. This is presently controlled with the `volumeSettings` key. Its values are (1) an associative array with path prefix; and (2) another associative array with settings for that path. (Presently, only `extendedAttributes` is supported.)
+If you don’t want these files, you can disable the use of extended attributes. This is presently controlled with the `volumeSettings` key. Its values are:
 
-So, if we wanted to disable extended attributes for files under `/net/`:
+1. an associative array with path prefix, and 
+2. another associative array with settings for that path. (Presently, only `extendedAttributes` is supported.)
+
+**Example:** If we wanted to disable extended attributes for files under `/net/`:
 
     defaults write com.macromates.TextMate.preview volumeSettings '{ "/net/" = { extendedAttributes = 0; }; }'
 
 
 ## Controlling Font Smoothing
 
-Font smoothing refers to sub-pixel anti-alias on LCD screens. The algorithm Apple uses will often make light text on dark backgrounds appear bolder than the same text on a bright background.
+Font smoothing refers to sub-pixel anti-alias on LCD screens. Apple’s font smoothing algorithm will often make light text on dark backgrounds appear bolder than the same text on a bright background.
 
-For this reason TextMate disables font smoothing when using dark themes and the user is on a high-DPI display (retina Mac).
+For this reason, TextMate disables font smoothing for dark themes on high-DPI displays (retina Mac).
 
 You can control the behavior with:
 
@@ -83,7 +86,7 @@ If you edit any these files, you’ll need to relaunch TextMate (<kbd>⌃⌘Q</k
 
 ## Find and extend selection
 
-These two action methods find the next/previous occurrence of the Find clipboard’s contents and selects it--while simultaneously preserving the existing selection.
+These two action methods find the next/previous occurrence of the Find clipboard’s contents and selects it, *while preserving the existing selection*:
 
 	findNextAndModifySelection:
 	findPreviousAndModifySelection:
