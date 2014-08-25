@@ -2,7 +2,7 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 
 6.	**Custom data sources for file browser**
 		
-	For example: Simplenote support, or sftp. See [FSDataSource.h][].
+	For example: Simplenote support, or sftp. See [`FSDataSource.h`][].
 
 12. **Implement `OakTabTriggerImage`**
 	
@@ -10,8 +10,8 @@ Here are some self-contained projects that shouldn’t require too much knowledg
 	
 	Making it an `NSImage` subclass should allow embedding it in attributed strings. This is what we use for the menu items, since it isn’t really possible to augment menu rendering in Cocoa. (The only workaround is to replace the full item with a custom view.) 
 	
-	For how to do this, check out the implementation of [OakFileIconImage][].
+	For how to do this, check out the implementation of [`OakFileIconImage.mm`][].
 
-[FSDataSource.h]:   https://github.com/textmate/textmate/blob/master/Frameworks/OakFileBrowser/src/io/FSDataSource.h
-[OakPasteboardSelector.mm]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
-[OakFileIconImage]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakFileIconImage.mm
+[`FSDataSource.h`]:   https://github.com/textmate/textmate/blob/master/Frameworks/OakFileBrowser/src/io/FSDataSource.h
+[`OakPasteboardSelector.mm`]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakPasteboardSelector.mm
+[`OakFileIconImage.mm`]: https://github.com/textmate/textmate/blob/master/Frameworks/OakAppKit/src/OakFileIconImage.mm
